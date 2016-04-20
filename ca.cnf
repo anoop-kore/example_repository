@@ -28,4 +28,4 @@ CN                     = ca
 emailAddress           = support@kore.com
 
 [ req_attributes ]
-challengePassword      = password
+challengePassword      = test
