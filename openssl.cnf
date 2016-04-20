@@ -1,0 +1,32 @@
+[ ca ]
+default_ca = CA_default
+
+[ CA_default ]
+serial = $dir/serial
+crl = $dir/crl/ca.crl
+database = $dir/ca-database.txt
+name_opt = CA_default
+cert_opt = CA_default
+default_crl_days = 9999
+default_md = sha256
+
+[ req ]
+default_bits           = 4096
+days                   = 9999
+distinguished_name     = req_distinguished_name
+string_mask            = utf8only
+attributes             = req_attributes
+prompt                 = no
+output_password        = password
+
+[ req_distinguished_name ]
+C                      = IN
+ST                     = TL
+L                      = Hyderabad
+O                      = Kore
+OU                     = Kore Connector
+CN                     = ca
+emailAddress           = support@kore.com
+
+[ req_attributes ]
+challengePassword      = test
